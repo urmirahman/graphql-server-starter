@@ -34,57 +34,67 @@ src/
 ## 🛠️ Installation
 
 ```bash
-git clone https://github.com/your-username/graphql-server.git
-cd graphql-server
+git clone https://github.com/urmirahman/graphql-server-starter.git
+cd graphql-server-starter
 pnpm install
 
 ```
 
 Tip: Make sure you have pnpm installed. If not:
 
-npm install -g pnpm
+`npm install -g pnpm`
 
 🚀 Available Scripts
 
 Command Description
-pnpm dev Start the server in development mode
-pnpm db-push Push the current schema to the database
-pnpm generate Generate Drizzle ORM migration files
-pnpm migrate Run pending migrations in the database
+
+1. `pnpm dev` Start the server in development mode
+
+2. `pnpm db-push` Push the current schema to the database
+
+3. `pnpm generate` Generate Drizzle ORM migration files
+
+4. `pnpm migrate` Run pending migrations in the database
 
 🌱 Environment Variables
 
 Create a .env file in the project root:
 
+```
 DATABASE_URL=postgresql://user:password@localhost:5432/dbname
 PORT=4000
 
-    •	DATABASE_URL: PostgreSQL connection string
-    •	PORT: (Optional) Port number for the server (default: 4000)
+```
 
-⚙️ Tech Stack
-• TypeScript
-• Express
-• Apollo Server (express middleware)
-• GraphQL
-• Drizzle ORM (v0.42.0)
-• PostgreSQL
-• dotenv
-• nodemon + tsx
+1. DATABASE_URL: PostgreSQL connection string
+2. PORT: (Optional) Port number for the server (default: 4000)
 
-📚 Drizzle ORM Commands
+### ⚙️ Tech Stack
+
+1.  TypeScript
+2.  Express
+3.  Apollo Server (express middleware)
+4.  GraphQL
+5.  Drizzle ORM (v0.42.0)
+6.  PostgreSQL
+7.  dotenv
+8.  nodemon + tsx
+
+### 📚 Drizzle ORM Commands
+
 • Push schema to DB:
 
-pnpm db-push
+`pnpm db-push`
 
-    •	Generate migrations (after modifying schema): pnpm generate
-    •	Run migrations: pnpm migrate
+• Generate migrations (after modifying schema): `pnpm generate`
 
-Note: Setup your drizzle.config.ts properly before running these commands.
+• Run migrations: `pnpm migrate`
+
+Note: Setup your `drizzle.config.ts` properly before running these commands.
 
 Example drizzle.config.ts:
 
-```bash
+```
 import { defineConfig } from 'drizzle-kit';
 
 export default defineConfig({
@@ -97,32 +107,27 @@ export default defineConfig({
 });
 ```
 
-⸻
+### 📦 Deployment Notes
 
-📦 Deployment Notes
-• Set your .env values correctly on your production server.
-• Use process managers like PM2 or deploy via Docker if needed.
-• Ensure your database is accessible from the production environment.
+1. Set your .env values correctly on your production server.
+2. Use process managers like PM2 or deploy via Docker if needed.
+3. Ensure your database is accessible from the production environment.
 
-⸻
-
-🤝 Contributing
+### 🤝 Contributing
 
 Contributions, feedback, and feature suggestions are welcome!
 Feel free to open an issue or pull request.
 
-⸻
-
-📝 License
+### 📝 License
 
 This project is licensed under the ISC License.
 
-⸻
+### 📋 Quick Start Example
 
-📋 Quick Start Example
-
+```
 pnpm install
 cp .env.example .env # or manually create a .env
 pnpm dev
+```
 
-Then open http://localhost:4000/graphql in your browser to access the GraphQL Playground 🚀.
+Then open `http://localhost:4000/graphql` in your browser to access the GraphQL Playground 🚀.
