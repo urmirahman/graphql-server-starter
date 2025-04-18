@@ -90,14 +90,8 @@ PORT=4000
 pnpm db-push
 
 
-	•	Generate migrations (after modifying schema):
-
-pnpm generate
-
-
-	•	Run migrations:
-
-pnpm migrate
+	•	Generate migrations (after modifying schema): `pnpm generate`
+	•	Run migrations: `pnpm migrate`
 
 
 
