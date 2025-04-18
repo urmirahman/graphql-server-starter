@@ -17,11 +17,8 @@ A minimal and clean template to quickly spin up a **GraphQL** server with **Expr
 ## 📁 Project Structure
 
 src/
-
 ├── index.ts # Entry point: Server and Apollo initialization
-
 ├── db/
-
 │ ├── schema.ts # Drizzle ORM schema definitions
 
 │ └── client.ts # Drizzle ORM PostgreSQL client setup
